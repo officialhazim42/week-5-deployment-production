@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Production Deployment Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">WEEK 5 • INTERNSHIP PROJECT</p>
+      <h1>Production Deployment Dashboard</h1>
+    </div>
+    <button id="refreshBtn" class="btn">↻ Refresh</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="badge">● Production Online</span>
+        <h2>Deployment & Monitoring</h2>
+        <p>Monitor application health, deployment status, performance metrics and production activity.</p>
+      </div>
+      <div class="release">
+        <span>Current Release</span>
+        <strong id="version">v1.5.0</strong>
+        <small id="deployTime">Deployed recently</small>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <span>Application</span>
+        <strong class="success">Healthy</strong>
+        <small>All services operational</small>
+      </article>
+      <article class="card">
+        <span>Environment</span>
+        <strong>Production</strong>
+        <small>Live environment</small>
+      </article>
+      <article class="card">
+        <span>Uptime</span>
+        <strong id="uptime">99.98%</strong>
+        <small>Last 30 days</small>
+      </article>
+      <article class="card">
+        <span>Deployment</span>
+        <strong class="success">Successful</strong>
+        <small id="lastDeploy">Latest build passed</small>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <div class="panel-title">
+          <div><h3>System Health</h3><p>Live simulated production metrics</p></div>
+          <button id="healthBtn" class="small-btn">Run Health Check</button>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <div><span>CPU Usage</span><b id="cpuValue">42%</b></div>
+            <div class="bar"><i id="cpuBar" style="width:42%"></i></div>
+          </div>
+          <div class="metric">
+            <div><span>Memory Usage</span><b id="memoryValue">61%</b></div>
+            <div class="bar"><i id="memoryBar" style="width:61%"></i></div>
+          </div>
+          <div class="metric">
+            <div><span>Response Time</span><b id="responseValue">184 ms</b></div>
+            <div class="bar"><i id="responseBar" style="width:37%"></i></div>
+          </div>
+        </div>
+        <p id="healthMessage" class="message">Last health check: ready.</p>
+      </article>
+
+      <article class="panel">
+        <div class="panel-title">
+          <div><h3>Deployment Pipeline</h3><p>Release workflow</p></div>
+        </div>
+        <div class="pipeline">
+          <div class="step done"><span>✓</span><div><b>Development</b><small>Completed</small></div></div>
+          <div class="line done"></div>
+          <div class="step done"><span>✓</span><div><b>Testing</b><small>Passed</small></div></div>
+          <div class="line done"></div>
+          <div class="step done"><span>✓</span><div><b>Staging</b><small>Verified</small></div></div>
+          <div class="line done"></div>
+          <div class="step current"><span>●</span><div><b>Production</b><small>Live</small></div></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <div class="panel-title">
+          <div><h3>Recent Activity Logs</h3><p>Latest production events</p></div>
+        </div>
+        <div id="logs" class="logs">
+          <div class="log"><span class="dot ok"></span><div><b>Deployment completed</b><small>Release v1.5.0 deployed successfully</small></div><time>2 min ago</time></div>
+          <div class="log"><span class="dot ok"></span><div><b>Health check passed</b><small>All monitored services responded normally</small></div><time>8 min ago</time></div>
+          <div class="log"><span class="dot info"></span><div><b>Configuration checked</b><small>Production settings verified</small></div><time>15 min ago</time></div>
+          <div class="log"><span class="dot warn"></span><div><b>Performance notice</b><small>Response time briefly increased</small></div><time>24 min ago</time></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-title">
+          <div><h3>Production Checklist</h3><p>Release readiness</p></div>
+        </div>
+        <ul class="checklist">
+          <li>✓ Application tested</li>
+          <li>✓ Production configuration verified</li>
+          <li>✓ Error handling reviewed</li>
+          <li>✓ Monitoring enabled</li>
+          <li>✓ Logs available</li>
+          <li>✓ Rollback plan prepared</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by <strong>Hazim Bashir Faqeer</strong> • Week 5 Deployment & Production</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
